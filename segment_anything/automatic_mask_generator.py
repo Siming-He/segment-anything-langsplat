@@ -161,10 +161,14 @@ class SamAutomaticMaskGenerator:
 
         # Generate masks
         mask_data, mask_data_s, mask_data_m, mask_data_l = self._generate_masks(image)
-
-        curr_anns = self.generate_curr_anns(mask_data)
-        curr_anns_s = self.generate_curr_anns(mask_data_s)
-        curr_anns_m = self.generate_curr_anns(mask_data_m)
+        
+        # commented out to save some time
+        # curr_anns = self.generate_curr_anns(mask_data)
+        # curr_anns_s = self.generate_curr_anns(mask_data_s)
+        # curr_anns_m = self.generate_curr_anns(mask_data_m)
+        curr_anns = None    
+        curr_anns_s = None
+        curr_anns_m = None
         curr_anns_l = self.generate_curr_anns(mask_data_l)
         return curr_anns, curr_anns_s, curr_anns_m, curr_anns_l
 
